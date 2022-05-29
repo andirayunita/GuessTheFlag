@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O8J-6u-HJM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GuessTheFlag" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzi-tT-cPb">
+                                <rect key="frame" x="107" y="100" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Tzi-tT-cPb" secondAttribute="height" multiplier="2:1" id="nak-Or-Bvn"/>
+                                </constraints>
+                                <state key="normal" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fM4-mO-Jio"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pp8-Zg-gk5">
+                                <rect key="frame" x="107" y="360" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Pp8-Zg-gk5" secondAttribute="height" multiplier="2:1" id="qho-D1-fhy"/>
+                                </constraints>
+                                <state key="normal" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RSa-oB-cxO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QG2-mi-L8N">
+                                <rect key="frame" x="107" y="230" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QG2-mi-L8N" secondAttribute="height" multiplier="2:1" id="2Ma-rJ-oKc"/>
+                                </constraints>
+                                <state key="normal" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="96q-zt-hKN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.92966274221872924" green="0.93281334640000002" blue="0.10451729118760959" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Pp8-Zg-gk5" secondAttribute="bottom" constant="20" id="Ek2-tf-ya0"/>
+                            <constraint firstItem="QG2-mi-L8N" firstAttribute="height" secondItem="Tzi-tT-cPb" secondAttribute="height" id="H8X-Tz-saf"/>
+                            <constraint firstItem="Tzi-tT-cPb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="J8P-r6-PgI"/>
+                            <constraint firstItem="Pp8-Zg-gk5" firstAttribute="top" secondItem="QG2-mi-L8N" secondAttribute="bottom" constant="30" id="JmV-54-W5o"/>
+                            <constraint firstItem="Pp8-Zg-gk5" firstAttribute="height" secondItem="QG2-mi-L8N" secondAttribute="height" id="KZJ-rt-NSL"/>
+                            <constraint firstItem="Tzi-tT-cPb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="LlV-zO-86w"/>
+                            <constraint firstItem="Pp8-Zg-gk5" firstAttribute="centerX" secondItem="QG2-mi-L8N" secondAttribute="centerX" id="XTx-Rl-mgE"/>
+                            <constraint firstItem="QG2-mi-L8N" firstAttribute="centerX" secondItem="Tzi-tT-cPb" secondAttribute="centerX" id="bMA-Uy-GgU"/>
+                            <constraint firstItem="QG2-mi-L8N" firstAttribute="top" secondItem="Tzi-tT-cPb" secondAttribute="bottom" constant="30" id="hrA-CB-xQq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YLI-KV-WgR">
+                        <barButtonItem key="rightBarButtonItem" title="Score" id="bkT-2r-yPT">
+                            <connections>
+                                <action selector="scoreTapped:" destination="BYZ-38-t0r" id="0eV-0c-AEI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="button1" destination="Tzi-tT-cPb" id="dU7-5W-Py7"/>
+                        <outlet property="button2" destination="QG2-mi-L8N" id="itF-0c-Vme"/>
+                        <outlet property="button3" destination="Pp8-Zg-gk5" id="1h8-7h-329"/>
+                        <outlet property="scoreLabel" destination="bkT-2r-yPT" id="HQk-i9-BdC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905.79710144927549" y="78.348214285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="scB-Mg-B9j">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O8J-6u-HJM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r5d-W9-Slr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eFc-hE-n23"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pcx-UI-KlC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4.3478260869565224" y="78.348214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="us" width="200" height="100"/>
+    </resources>
+</document>
